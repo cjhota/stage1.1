@@ -1,0 +1,170 @@
+:root {
+    --mulledWine: #4A4E69;
+    --baliHai: #8E9AAF;
+    --chatelle: #CBC0D3;
+    --remy: #FEEAFA;
+    --titanWhite: #EFF1FF;
+
+    font-size: 62,5%;  
+    --staatliches: 'Staatliches', cursive;
+    --palanquin: 'Palanquin', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    background: var(--titanWhite);
+}
+
+.header {
+    background: var(--baliHai);
+    height: 24.4rem;
+}
+    /* delay iteration-count direction fill-mode; */
+
+@keyframes tranlate {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header .logo {
+    display: flex;
+    justify-content: center;
+    padding: 3.2rem 0;
+}
+
+.logo .cream {
+    /* width: 13.8rem;
+    height: 13.8rem; */
+    /* background-image: url(/stage03/01/assets/logo2.svg); */
+    background-repeat: no-repeat;
+    animation: tranlate 700ms ease-in-out;
+    transition: transform 200ms ;
+}
+
+.logo .cream svg {
+    width: 13.7rem;
+    height: 13.7rem;
+}
+
+.logo .cream:hover {
+    /* background-image: url(/stage03/01/assets/logo1.svg); */
+    background-repeat: no-repeat;
+    transform: scale(1);
+}
+
+
+header .title {
+    background: var(--chatelle);
+    height: 4.9rem;
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: var(--staatliches);
+    font-size: clamp(2.5rem, 0.5rem + 8vw , 4.0rem);
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    font-weight: 400;
+    
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+}
+
+
+main {
+    max-width: clamp(33rem, 30rem +60vw, 70rem);
+    margin: auto;
+    width: 90%;
+}
+
+main section {   
+    max-width: 50rem;
+    margin: auto;
+    padding-top: 2.5rem;
+}
+
+
+main section p {
+    font-family: var(--palanquin);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 0.5rem + 3vw, 2.0rem);
+    line-height: 2.3rem;
+    text-align: center;
+    color: var(--darkpurple);
+}
+
+.card-wrapper {
+    margin-top: 6.3rem;
+    margin-bottom: 6.0rem;
+    display: grid;
+    gap: 3.2rem;
+}
+
+.card {
+    position: relative;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.25));
+}
+
+.card img {
+    width: 100%;
+    animation: fromBottom 1.2s;
+}
+
+.card h2 {
+    font-family: var(--staatliches);
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    color: var(--mulledWine);
+    position: absolute;
+    top: 3.6rem;
+    right: 3.6rem;  
+    background: var(--remy);
+    height: 3.5rem;
+    border-radius: 2.0rem;
+    padding: 0 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    animation: top 1.2s .2s backwards;
+}
+
+@keyframes bottom {
+    from {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes top {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
